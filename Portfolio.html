@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abdul Mueez — Digital Marketing Assistant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Sora:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./Portfolio.css">
+<style></style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-mark">A. MUEEZ</div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#content">Content</a>
+    <a href="#youtube">YouTube</a>
+    <a href="#sites">Sites</a>
+    <a href="#video">Video</a>
+    <a href="#affiliate">Affiliate</a>
+    <a href="#dev">Dev</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!--
+  HERO BACKGROUND — to add one, drop an image at ./images/hero-bg.jpg (or edit
+  the filename in Portfolio.css under "header.hero"). Recommended format:
+    - JPG or WebP, landscape / wide orientation
+    - At least 1920×1080px (bigger is fine, it's cropped to cover the section)
+    - Keep the file under ~500KB so the page still loads fast
+  A dark gradient is layered on top in CSS so your name and text stay readable
+  over any photo — you don't need to darken the image yourself.
+-->
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-inner">
+      <div>
+        <div class="eyebrow">Available for opportunities</div>
+        <h1 class="name">ABDUL<br>MUEEZ</h1>
+        <div class="role-line">Digital Marketing Assistant <span>&</span> Front-End Web Developer</div>
+        <p class="bio">Turning ideas into engaging content, growing brands organically, and building digital experiences that connect.</p>
+        <a class="hero-cta" href="./Abdul-Mueez-Resume.pdf" download="Abdul-Mueez-Resume.pdf">↓ Download Resume (PDF)</a>
+      </div>
+      <div class="hero-photo"><img src="./images/Profile Photo (1).jpeg"></div>
+    </div>
+
+    <div class="proof">
+      <div class="chip"><div class="num tealtxt">1,874</div><div class="lbl">YouTube subscribers</div></div>
+      <div class="chip"><div class="num">1.23M</div><div class="lbl">Views · lifetime</div></div>
+      <div class="chip"><div class="num coraltxt">500</div><div class="lbl">Outreach emails / week</div></div>
+      <div class="chip"><div class="num">0</div><div class="lbl">Spent on ads</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-index">00</span>
+      <span class="sec-title">How I Work</span>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I manage digital content end-to-end — video, website and social — scheduling and publishing through Meta Business Suite, designing carousels and reels in Canva, and writing SEO copy (including alt text) that's built around what audiences are actually searching for, using Google Analytics to guide it.</p>
+        <p>Growth, for me, is proof-driven. I grew a YouTube channel past 1,000 subscribers with zero ad spend, ran affiliate outreach to hundreds of prospects a week, and I judge a video "successful" by one number: an average view duration of 80–90%. On the technical side, I build front-end interfaces myself and use AI as an assistant for image, video and ideation work — the thinking and direction stay mine.</p>
+      </div>
+      <div class="principle">
+        <div class="tag">Design philosophy</div>
+        <div class="quote">"Show results. Don't just describe yourself."</div>
+        <div class="note">A line from one of my own carousel designs (see below) — and the same rule I hold this portfolio to. Every number on this page is real.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL CONTENT -->
+<section id="content">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-index">01</span>
+      <span class="sec-title">Social Content</span>
+    </div>
+    <div class="sec-sub" style="margin-bottom:44px;">Carousels and single posts I've designed and written — concept, copy, images and pacing.</div>
+
+    <!-- PROJECT 1: "Losing Clients" — multi-post carousel with visible prev/next arrows -->
+    <div class="carousel-project" id="lcProject" data-manual="true">
+      <div class="carousel-block">
+        <div class="phone-stage">
+          <button class="phone-nav-btn" id="lcSlidePrev" aria-label="Previous slide">‹</button>
+          <div class="phone-frame">
+            <div class="phone-track carousel-track" id="lcTrack"><!-- filled by script --></div>
+          </div>
+          <button class="phone-nav-btn" id="lcSlideNext" aria-label="Next slide">›</button>
+        </div>
+        <div class="carousel-copy">
+          <div class="proj-tag">Project — Carousel Ad</div>
+          <h3 id="lcTitle"></h3>
+          <p id="lcBody"></p>
+          <div class="role-note">My role: concept, copywriting, sequencing and visual direction — built in Canva, refined with AI-assisted imagery.</div>
+          <div class="post-switcher">
+            <button id="lcPostPrev">‹ Prev Post</button>
+            <span id="lcPostLabel">Post 1 of 1</span>
+            <button id="lcPostNext">Next Post ›</button>
+          </div>
+        </div>
+      </div>
+      <div class="dots carousel-dots" id="lcDots"></div>
+      <div class="swipe-hint">← swipe, or use the arrows, to move through slides →</div>
+    </div>
+    <!--
+      TO ADD ANOTHER CAROUSEL POST HERE: scroll to the bottom of this file,
+      find the `lcPosts` array in the <script>, and add another object with
+      a title, body copy and a list of 5–6 image paths. It'll show up as the
+      next post when "Next Post" is clicked — no other HTML edits needed.
+    -->
+
+    <div class="carousel-project">
+      <div class="carousel-block">
+        <div class="phone-stage">
+          <button class="phone-nav-btn" id="ftSlidePrev" aria-label="Previous slide">‹</button>
+          <div class="phone-frame">
+            <div class="phone-track carousel-track">
+              <div class="phone-slide"><img src="./images/post  (1).jpeg"></div>
+              <div class="phone-slide"><img src="./images/post  (2).jpeg"></div>
+              <div class="phone-slide"><img src="./images/post  (3).jpeg"></div>
+              <div class="phone-slide"><img src="./images/post  (4).jpeg"></div>
+              <div class="phone-slide"><img src="./images/post  (5).jpeg"></div>
+              <div class="phone-slide"><img src="./images/post  (6).jpeg"></div>
+              <div class="phone-slide"><img src="./images/post (1).jpeg"></div>
+              <div class="phone-slide"><img src="./images/post (2).jpeg"></div>
+            </div>
+          </div>
+          <button class="phone-nav-btn" id="ftSlideNext" aria-label="Next slide">›</button>
+        </div>
+        <div class="carousel-copy">
+          <div class="proj-tag">Project — Posts</div>
+          <h3>"With Free Tools Have Amazing Designs"</h3>
+          <p>A 6-slide toolkit round-up (v0.dev, Cursor, Resend, Supabase) built as a save-worthy resource post — each tool gets its own branded slide with a clear "best for" line, closing on a follow CTA.</p>
+          <div class="role-note">My role: concept, tool selection, copywriting and slide layout — built in Canva.</div>
+        </div>
+      </div>
+      <div class="dots carousel-dots"></div>
+      <div class="swipe-hint">← swipe, or use the arrows, to move through slides →</div>
+    </div>
+
+    <!-- <div class="posts-row">
+      <div class="post-card">
+        <div class="media-empty"><div class="plus">+</div><p>Post Image</p></div>
+        <div class="pc-body">
+          <div class="pc-tag">Single Post</div>
+          <h5>"Chatbots Are Dead."</h5>
+          <p>AI/tech news hook post with a "read caption" CTA to drive comments and saves.</p>
+        </div>
+      </div>
+      <div class="post-empty"><div class="plus">+</div><p>ADD POST<br>OR CAROUSEL</p></div>
+    </div> -->
+  </div>
+</section>
+
+<!-- YOUTUBE -->
+<section id="youtube">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-index">02</span>
+      <span class="sec-title">YouTube Growth</span>
+    </div>
+    <div class="sec-sub" style="margin-bottom:44px;">Channel: <strong style="color:var(--text-hi)">Ediii</strong> — grown organically, no paid promotion.</div>
+
+    <div class="yt-grid">
+      <div class="yt-shot">
+        <div><img src="./images/youtube Ss.jpeg"></div>
+      </div>
+
+      <div>
+        <div class="yt-dash" style="margin-bottom:28px;">
+          <div class="yt-top">
+            <div class="yt-avatar">E</div>
+            <div class="yt-name">Ediii<span class="sub">YouTube channel</span></div>
+          </div>
+          <div class="yt-stats">
+            <div class="yt-stat"><div class="v">1,874</div><div class="l">Subscribers</div></div>
+            <div class="yt-stat"><div class="v">1.23M</div><div class="l">Views · lifetime</div></div>
+            <div class="yt-stat"><div class="v">77.7</div><div class="l">Watch hrs / 28d</div></div>
+          </div>
+          <div class="yt-bar-row">
+            <div class="yt-bar-label">Avg % viewed</div>
+            <div class="yt-bar-track"><div class="yt-bar-fill" style="width:41%"></div></div>
+            <div class="yt-bar-val">41%</div>
+          </div>
+          <div class="yt-bar-row">
+            <div class="yt-bar-label">Target benchmark</div>
+            <div class="yt-bar-track"><div class="yt-bar-fill" style="width:85%"></div></div>
+            <div class="yt-bar-val">80-90%</div>
+          </div>
+        </div>
+
+        <div class="yt-copy">
+          <p>I built this channel past its 1,000-subscriber goal — and kept going — <strong>without spending on Meta or YouTube ads.</strong> Growth came from consistent uploads and editing across CapCut, VN and Alight Motion.</p>
+          <p>I don't judge success by views alone. My own benchmark is <strong>average view duration between 80–90%</strong> — a signal that the content actually holds attention, not just gets clicks.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WEBSITE PROJECTS -->
+<section id="sites">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-index">03</span>
+      <span class="sec-title">Website Projects</span>
+    </div>
+    <div class="sec-sub" style="margin-bottom:44px;">Full site designs and builds — front-end layout, styling and content structure.</div>
+
+    <div class="site-grid" id="siteGrid"><!-- rendered by script --></div>
+    <div class="site-pager">
+      <button class="phone-nav-btn" id="sitePrev" aria-label="Previous projects">‹</button>
+      <span class="site-page-label" id="sitePageLabel"></span>
+      <button class="phone-nav-btn" id="siteNext" aria-label="Next projects">›</button>
+    </div>
+    <!--
+      TO ADD MORE PROJECTS: scroll to the bottom of this file and add an
+      object to the `siteProjects` array — { image, tag, title, description }.
+      Two show per page; the Next button pages through the rest automatically.
+    -->
+
+    <div class="logo-strip">
+      <div class="media-empty"><img src="./images/Artwork.jpeg"></div>
+      <div>
+        <div class="lt">Brand Mark</div>
+        <h5>Artworks</h5>
+        <p>A minimal arched wordmark paired with a hand-drawn leaf motif — logo concept and design.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- YOUTUBE VIDEO CONTENT — full-width 16:9 swipe carousel -->
+<section id="video">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-index">04</span>
+      <span class="sec-title">YouTube Video Content</span>
+    </div>
+    <div class="sec-sub" style="margin-bottom:44px;">Full-width uploads — swipe or use the arrows to move to the next one. These are unlisted on YouTube, so no public view count is shown.</div>
+
+    <div class="video-board" id="videoBoard">
+      <div class="vid-carousel-stage">
+        <button class="phone-nav-btn vid-nav-btn" id="ytPrev" aria-label="Previous video">‹</button>
+        <div class="vid-frame vid-frame-full">
+          <div class="vid-track" id="ytTrack"><!-- rendered by script --></div>
+        </div>
+        <button class="phone-nav-btn vid-nav-btn" id="ytNext" aria-label="Next video">›</button>
+      </div>
+      <div class="dots vid-dots" id="ytDots"></div>
+      <div class="vid-caption">
+        <h4 id="ytTitle"></h4>
+        <p id="ytDesc"></p>
+      </div>
+      <div class="swipe-hint">← swipe, or use the arrows, to move to the next video →</div>
+      <!--
+        TO ADD A VIDEO: scroll to the bottom of this file and add an entry to
+        the `ytVideos` array — { id:'YOUTUBE_ID', title:'...', description:'...' }.
+        Title and description are just what you type here; nothing is pulled
+        from YouTube automatically, and no view count is shown anywhere.
+      -->
+    </div>
+  </div>
+</section>
+
+<!-- AFFILIATE / REELS PERFORMANCE -->
+<section id="affiliate">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-index">05</span>
+      <span class="sec-title">Affiliate Content</span>
+    </div>
+    <div class="sec-sub" style="margin-bottom:44px;">Amazon-find reels I write and post on <strong style="color:var(--text-hi)">@mrtec.h09</strong> — real performance, pulled straight from Insights. Six to a row, and each one plays right in the card.</div>
+
+    <div class="reel-grid">
+      <div class="reel-card">
+        <div class="reel-shot">
+          <video class="reel-video" controls preload="metadata" poster="">
+            <source src="./videos/video 3 (4).mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="reel-body">
+          <div class="reel-account">@mrtec.h09</div>
+          <div class="reel-caption">"Stop tearing your closet apart just to find one shirt! These stackable, sliding closet organizers are an absolute game-changer..."</div>
+          <div class="reel-stats">
+            <div class="reel-stat"><div class="rv">13.2K</div><div class="rl">Views</div></div>
+            <div class="reel-stat"><div class="rv">60</div><div class="rl">Likes</div></div>
+            <div class="reel-stat"><div class="rv">17</div><div class="rl">Saves</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="reel-card">
+        <div class="reel-shot">
+          <video class="reel-video" controls preload="metadata" poster="">
+            <source src="./videos/video 3 (3).mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="reel-body">
+          <div class="reel-account">@mrtec.h09</div>
+          <div class="reel-caption">"Melt away baked-on grease in seconds. Tired of scrubbing your stovetop for hours? Let the tech do the heavy lifting..."</div>
+          <div class="reel-stats">
+            <div class="reel-stat"><div class="rv">2,097</div><div class="rl">Views</div></div>
+            <div class="reel-stat"><div class="rv">7</div><div class="rl">Likes</div></div>
+            <div class="reel-stat"><div class="rv">3</div><div class="rl">Comments</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WEB DEV -->
+<section id="dev">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-index">06</span>
+      <span class="sec-title">Front-End Builds</span>
+    </div>
+    <div class="sec-sub" style="margin-bottom:44px;">Front-end is my strength; I'm building up back-end alongside it. A handful of hands-on JavaScript/CSS builds from my practice log:</div>
+
+    <div class="dev-grid">
+      <div class="dev-card"><div class="idx">01</div><h4>Keyboard Drum Kit</h4><p>Press a key, trigger a sound and a CSS animation — keydown events mapped to 9 audio samples.</p><a class="dev-download" href="./keyboard,.html">↓ Check Now</a></div>
+      <div class="dev-card"><div class="idx">02</div><h4>Custom Video Player</h4><p>Play/pause, scrub bar and speed controls built from raw JS, no library.</p><a class="dev-download" href="./videoplayer.html">↓ Check Now</a></div>
+      <div class="dev-card"><div class="idx">03</div><h4>CSS Variables Controller</h4><p>Live-updating spacing, blur and color via JS-driven CSS custom properties.</p><a class="dev-download" href="./variables.html">↓ Check Now</a></div>
+      <div class="dev-card"><div class="idx">04</div><h4>Flexbox Panels</h4><p>Click-to-expand image panels built with pure CSS Flexbox — no grid framework.</p><a class="dev-download" href="./flexbox.html"> Check now</a></div>
+      <div class="dev-card"><div class="idx">05</div><h4>Custom Checkbox UI</h4><p>Fully restyled checkbox component replacing default browser controls.</p><a class="dev-download" href="./checkbox.html"> Check now</a></div>
+      <div class="dev-card"><div class="idx">06</div><h4>HTML5 Canvas Drawing</h4><p>Freehand drawing pad using the Canvas API and mouse-event tracking.</p><a class="dev-download" href="./html5canvas.html">Check now</a></div>
+    </div>
+
+    <div class="dev-note">These are hands-on JS fundamentals — the kind I lean on when building <strong>and</strong> maintaining a marketing site myself, instead of just briefing someone else to.</div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-index">07</span>
+      <span class="sec-title">Skills</span>
+    </div>
+    <div class="skills-wrap">
+      <span class="skill-pill">Meta Business Suite</span>
+      <span class="skill-pill">Facebook Ads Manager</span>
+      <span class="skill-pill">Canva Pro</span>
+      <span class="skill-pill">Content Creation & Design</span>
+      <span class="skill-pill">Instagram SEO / Alt Text</span>
+      <span class="skill-pill">Google Analytics</span>
+      <span class="skill-pill">On-Page & Content SEO</span>
+      <span class="skill-pill">YouTube Studio</span>
+      <span class="skill-pill">Email Outreach</span>
+      <span class="skill-pill">Data Analysis & Reporting</span>
+      <span class="skill-pill">Front-End Web Development</span>
+      <span class="skill-pill">Google Sheets</span>
+      <span class="skill-pill">Microsoft Excel</span>
+      <span class="skill-pill">Microsoft Word</span>
+      <span class="skill-pill">AI-Assisted Content & Image Creation</span>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-index">08</span>
+      <span class="sec-title">Education</span>
+    </div>
+    <div class="edu-row">
+      <div class="edu-deg">Bachelor of Business Administration (BBA)</div>
+      <div class="edu-meta">Business Administration</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<footer id="contact">
+  <div class="wrap">
+    <div class="contact-headline">Let's grow your <span class="accent">next channel</span> the same way.</div>
+    <p class="sub">Open to Digital Marketing Assistant and front-end roles. Send a message and I'll reply directly.</p>
+    <div class="cta-row">
+      <a class="contact-cta" href="mailto:digitalmarketmeto@gmail.com">digitalmarketmeto@gmail.com →</a>
+      <a class="contact-cta ghost" href="./Abdul-Mueez-Resume.pdf" download="Abdul-Mueez-Resume.pdf">↓ Resume (PDF)</a>
+    </div>
+
+    <div class="foot-bottom">
+      <span>ABDUL MUEEZ — DIGITAL MARKETING ASSISTANT</span>
+      <span>BUILT WITH REAL NUMBERS</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* generic scroll-tracked dots for any .carousel-project that ISN'T manually managed */
+  document.querySelectorAll('.carousel-project:not([data-manual])').forEach(proj => {
+    const track = proj.querySelector('.carousel-track');
+    const dotsWrap = proj.querySelector('.carousel-dots');
+    const slides = track.querySelectorAll('.phone-slide');
+    slides.forEach((_, i) => {
+      const d = document.createElement('div');
+      d.className = 'dot' + (i === 0 ? ' active' : '');
+      dotsWrap.appendChild(d);
+    });
+    const dots = dotsWrap.querySelectorAll('.dot');
+    track.addEventListener('scroll', () => {
+      const idx = Math.round(track.scrollLeft / track.clientWidth);
+      dots.forEach((d,i) => d.classList.toggle('active', i === idx));
+    });
+  });
+
+  /* slide-arrow buttons for the "Free Tools" project (block 2) */
+  const ftTrack = document.querySelectorAll('.carousel-track')[1];
+  document.getElementById('ftSlidePrev').addEventListener('click', () => ftTrack.scrollBy({left: -ftTrack.clientWidth, behavior:'smooth'}));
+  document.getElementById('ftSlideNext').addEventListener('click', () => ftTrack.scrollBy({left: ftTrack.clientWidth, behavior:'smooth'}));
+
+  // scroll-reveal
+  document.querySelectorAll('section > .wrap > *').forEach(el => el.classList.add('reveal'));
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  /* ===================== PROJECT 1: "Losing Clients" — multi-post carousel ===================== */
+  const lcPosts = [
+    {
+      title: `"You're Losing Clients. And You Don't Even Know Why."`,
+      body: `A 6-slide hook-driven carousel built to stop the scroll: a cold-open visual, four clearly numbered problems, and a close with a direct call to action. Designed for Instagram feed at 4:5.`,
+      images: ['./images/1.png','./images/2.png','./images/3.png','./images/4.png','./images/5.png','./images/6.png']
+    },
+    {
+      title: `Add your next carousel post`,
+      body: `Swap this copy and drop in 5–6 slide images in the \`lcPosts\` array below — this slot is ready to go.`,
+      images: []
+    }
+  ];
+  let lcPostIdx = 0;
+
+  function renderLcPost(){
+    const post = lcPosts[lcPostIdx];
+    const track = document.getElementById('lcTrack');
+    const dotsWrap = document.getElementById('lcDots');
+    track.innerHTML = '';
+    dotsWrap.innerHTML = '';
+    if (post.images.length){
+      post.images.forEach(src => {
+        const slide = document.createElement('div');
+        slide.className = 'phone-slide';
+        slide.innerHTML = `<img src="${src}">`;
+        track.appendChild(slide);
+      });
+      post.images.forEach((_, i) => {
+        const d = document.createElement('div');
+        d.className = 'dot' + (i === 0 ? ' active' : '');
+        dotsWrap.appendChild(d);
+      });
+    } else {
+      const slide = document.createElement('div');
+      slide.className = 'phone-slide';
+      slide.innerHTML = `<div class="media-empty" style="height:100%;"><div class="plus">+</div><p>Add Slide Images</p></div>`;
+      track.appendChild(slide);
+    }
+    document.getElementById('lcTitle').textContent = post.title;
+    document.getElementById('lcBody').textContent = post.body;
+    document.getElementById('lcPostLabel').textContent = `Post ${lcPostIdx + 1} of ${lcPosts.length}`;
+    track.scrollTo({left: 0});
+  }
+  const lcTrackEl = document.getElementById('lcTrack');
+  lcTrackEl.addEventListener('scroll', () => {
+    const idx = Math.round(lcTrackEl.scrollLeft / lcTrackEl.clientWidth);
+    document.querySelectorAll('#lcDots .dot').forEach((d,i) => d.classList.toggle('active', i === idx));
+  });
+  document.getElementById('lcPostPrev').addEventListener('click', () => { lcPostIdx = (lcPostIdx - 1 + lcPosts.length) % lcPosts.length; renderLcPost(); });
+  document.getElementById('lcPostNext').addEventListener('click', () => { lcPostIdx = (lcPostIdx + 1) % lcPosts.length; renderLcPost(); });
+  document.getElementById('lcSlidePrev').addEventListener('click', () => lcTrackEl.scrollBy({left: -lcTrackEl.clientWidth, behavior:'smooth'}));
+  document.getElementById('lcSlideNext').addEventListener('click', () => lcTrackEl.scrollBy({left: lcTrackEl.clientWidth, behavior:'smooth'}));
+  renderLcPost();
+
+  /* ===================== YOUTUBE VIDEO CONTENT: full-width swipe carousel ===================== */
+  /* Add as many videos as you like — the carousel handles any number of        */
+  /* slides. Title/description are typed here, not pulled from YouTube (these  */
+  /* uploads are Unlisted, and no view count is fetched or shown, on purpose). */
+  const ytVideos = [
+    { id:'GV9OEqpqWaE', title:'Sample of My Efforts', description:'A quick edit from the Mueez Anxari channel.' }
+    // add more here, e.g.:
+    // { id:'YOUR_VIDEO_ID', title:'Your Title', description:'A line or two about this clip.' },
+  ];
+
+  function renderYtVideos(){
+    const track = document.getElementById('ytTrack');
+    const dotsWrap = document.getElementById('ytDots');
+    track.innerHTML = '';
+    dotsWrap.innerHTML = '';
+    ytVideos.forEach((v, i) => {
+      const slide = document.createElement('div');
+      slide.className = 'vid-slide';
+      slide.innerHTML = `<div class="vid-embed"><iframe src="https://www.youtube.com/embed/${v.id}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
+      track.appendChild(slide);
+      const d = document.createElement('div');
+      d.className = 'dot' + (i === 0 ? ' active' : '');
+      dotsWrap.appendChild(d);
+    });
+    updateYtCaption(0);
+    track.scrollTo({left: 0});
+  }
+
+  function updateYtCaption(i){
+    const v = ytVideos[i];
+    if (!v) return;
+    document.getElementById('ytTitle').textContent = v.title;
+    document.getElementById('ytDesc').textContent = v.description;
+    document.querySelectorAll('#ytDots .dot').forEach((d, idx) => d.classList.toggle('active', idx === i));
+  }
+
+  const ytTrackEl = document.getElementById('ytTrack');
+  ytTrackEl.addEventListener('scroll', () => {
+    const idx = Math.round(ytTrackEl.scrollLeft / ytTrackEl.clientWidth);
+    updateYtCaption(idx);
+  });
+  document.getElementById('ytPrev').addEventListener('click', () => ytTrackEl.scrollBy({left: -ytTrackEl.clientWidth, behavior:'smooth'}));
+  document.getElementById('ytNext').addEventListener('click', () => ytTrackEl.scrollBy({left: ytTrackEl.clientWidth, behavior:'smooth'}));
+  renderYtVideos();
+
+  /* ===================== WEBSITE PROJECTS: paginated grid ===================== */
+  /* Keeps the same two-up card layout — add as many projects as you like to    */
+  /* the array below, and the Next button pages through them two at a time.     */
+  const siteProjects = [
+    {
+      image: './images/project (1).jpeg',
+      tag: 'Interior / Furniture',
+      title: 'Elevate Your Living',
+      description: 'A furniture & interior-design site — hero product shot, room-category grid (Living & Dining, Bedroom, Kitchen), and a warm neutral palette suited to a home brand.'
+    },
+    {
+      image: './images/project (2).jpeg',
+      tag: 'Food / Recipes',
+      title: 'Cook.',
+      description: 'A recipe & cooking-content site — featured recipe cards, a "browse by cuisine" grid, and a contest CTA to drive engagement.'
+    }
+    // add more here, e.g.:
+    // { image:'./images/your-shot.jpeg', tag:'Category', title:'Site Name', description:'What it is and what you built.' },
+  ];
+  const SITES_PER_PAGE = 2;
+  let sitePage = 0;
+
+  function renderSitesPage(){
+    const grid = document.getElementById('siteGrid');
+    grid.innerHTML = '';
+    const start = sitePage * SITES_PER_PAGE;
+    siteProjects.slice(start, start + SITES_PER_PAGE).forEach(p => {
+      const card = document.createElement('div');
+      card.className = 'site-card';
+      card.innerHTML = `
+        <div class="site-shot"><img src="${p.image}"></div>
+        <div class="site-body">
+          <div class="stag">${p.tag}</div>
+          <h4>${p.title}</h4>
+          <p>${p.description}</p>
+        </div>`;
+      grid.appendChild(card);
+    });
+    const totalPages = Math.max(1, Math.ceil(siteProjects.length / SITES_PER_PAGE));
+    document.getElementById('sitePageLabel').textContent = `${sitePage + 1} / ${totalPages}`;
+    document.getElementById('sitePrev').disabled = sitePage === 0;
+    document.getElementById('siteNext').disabled = sitePage >= totalPages - 1;
+  }
+  document.getElementById('sitePrev').addEventListener('click', () => {
+    if (sitePage > 0) { sitePage--; renderSitesPage(); }
+  });
+  document.getElementById('siteNext').addEventListener('click', () => {
+    const totalPages = Math.ceil(siteProjects.length / SITES_PER_PAGE);
+    if (sitePage < totalPages - 1) { sitePage++; renderSitesPage(); }
+  });
+  renderSitesPage();
+</script>
+
+</body>
+</html>
