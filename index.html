@@ -148,7 +148,7 @@
       <div class="swipe-hint">← swipe, or use the arrows, to move through slides →</div>
     </div>
 
-    <!-- <div class="posts-row">
+    <div class="posts-row">
       <div class="post-card">
         <div class="media-empty"><div class="plus">+</div><p>Post Image</p></div>
         <div class="pc-body">
@@ -158,7 +158,7 @@
         </div>
       </div>
       <div class="post-empty"><div class="plus">+</div><p>ADD POST<br>OR CAROUSEL</p></div>
-    </div> -->
+    </div>
   </div>
 </section>
 
@@ -230,7 +230,7 @@
     -->
 
     <div class="logo-strip">
-      <div class="media-empty"><img src="./Artwork.jpeg"></div>
+      <div class="media-empty"><div class="plus">+</div><p>Logo</p></div>
       <div>
         <div class="lt">Brand Mark</div>
         <h5>Artworks</h5>
@@ -240,14 +240,14 @@
   </div>
 </section>
 
-<!-- YOUTUBE VIDEO CONTENT — full-width 16:9 swipe carousel -->
+<!-- VIDEO CONTENT — full-width 16:9 swipe carousel (YouTube links + your own video files) -->
 <section id="video">
   <div class="wrap">
     <div class="sec-head">
       <span class="sec-index">04</span>
-      <span class="sec-title">YouTube Video Content</span>
+      <span class="sec-title">Video Content</span>
     </div>
-    <div class="sec-sub" style="margin-bottom:44px;">Full-width uploads — swipe or use the arrows to move to the next one. These are unlisted on YouTube, so no public view count is shown.</div>
+    <div class="sec-sub" style="margin-bottom:44px;">Full-width uploads — swipe or use the arrows to move to the next one. Mixes YouTube links (unlisted, so no public view count shown) with your own downloaded video files.</div>
 
     <div class="video-board" id="videoBoard">
       <div class="vid-carousel-stage">
@@ -265,9 +265,11 @@
       <div class="swipe-hint">← swipe, or use the arrows, to move to the next video →</div>
       <!--
         TO ADD A VIDEO: scroll to the bottom of this file and add an entry to
-        the `ytVideos` array — { id:'YOUTUBE_ID', title:'...', description:'...' }.
-        Title and description are just what you type here; nothing is pulled
-        from YouTube automatically, and no view count is shown anywhere.
+        the `ytVideos` array. Two shapes:
+          YouTube:  { type:'youtube', id:'VIDEO_ID', title:'...', description:'...' }
+          Own file: { type:'file', src:'./videos/yourfile.mp4', title:'...', description:'...' }
+        Title/description are just what you type here — nothing is fetched
+        automatically, and no view count is shown anywhere.
       -->
     </div>
   </div>
@@ -286,15 +288,15 @@
       <div class="reel-card">
         <div class="reel-shot">
           <video class="reel-video" controls preload="metadata" poster="">
-            <source src="./video 3 (4).mp4" type="video/mp4">
+            <source src="" type="video/mp4">
           </video>
         </div>
         <div class="reel-body">
           <div class="reel-account">@mrtec.h09</div>
           <div class="reel-caption">"Stop tearing your closet apart just to find one shirt! These stackable, sliding closet organizers are an absolute game-changer..."</div>
           <div class="reel-stats">
-            <div class="reel-stat"><div class="rv">13.2K</div><div class="rl">Views</div></div>
-            <div class="reel-stat"><div class="rv">60</div><div class="rl">Likes</div></div>
+            <div class="reel-stat"><div class="rv">10.2K</div><div class="rl">Views</div></div>
+            <div class="reel-stat"><div class="rv">52</div><div class="rl">Likes</div></div>
             <div class="reel-stat"><div class="rv">17</div><div class="rl">Saves</div></div>
           </div>
         </div>
@@ -302,7 +304,7 @@
       <div class="reel-card">
         <div class="reel-shot">
           <video class="reel-video" controls preload="metadata" poster="">
-            <source src="./video 3 (3).mp4" type="video/mp4">
+            <source src="" type="video/mp4">
           </video>
         </div>
         <div class="reel-body">
@@ -315,6 +317,43 @@
           </div>
         </div>
       </div>
+      <!-- ADD MORE REELS: copy a .reel-card block and fill in src/poster -->
+      <div class="reel-card">
+        <div class="reel-shot">
+          <iframe class="reel-video" src="https://www.youtube.com/embed/UCg7BoaWsBg" title="YouTube Short" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="reel-body">
+          <div class="reel-account">YouTube Short</div>
+          <div class="reel-caption">Add a short caption describing this clip.</div>
+        </div>
+      </div>
+      <div class="reel-card">
+        <div class="reel-shot">
+          <iframe class="reel-video" src="https://www.youtube.com/embed/1wL_iU4qm7M" title="YouTube Short" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="reel-body">
+          <div class="reel-account">YouTube Short</div>
+          <div class="reel-caption">Add a short caption describing this clip.</div>
+        </div>
+      </div>
+      <a class="reel-card reel-link" href="https://www.instagram.com/reel/DbXcN-IgsLT/?igsh=N24waWNuZWt4NWtj" target="_blank" rel="noopener">
+        <div class="reel-shot">
+          <div class="media-empty" style="height:100%;"><div class="plus">▶</div><p>View on<br>Instagram</p></div>
+        </div>
+        <div class="reel-body">
+          <div class="reel-account">@mrtec.h09</div>
+          <div class="reel-caption">Add a short caption describing this reel — opens on Instagram.</div>
+        </div>
+      </a>
+      <a class="reel-card reel-link" href="https://www.instagram.com/reel/DbObDtyxfhX/?igsh=MXM5ZG1wa21qY2VldQ==" target="_blank" rel="noopener">
+        <div class="reel-shot">
+          <div class="media-empty" style="height:100%;"><div class="plus">▶</div><p>View on<br>Instagram</p></div>
+        </div>
+        <div class="reel-body">
+          <div class="reel-account">@mrtec.h09</div>
+          <div class="reel-caption">Add a short caption describing this reel — opens on Instagram.</div>
+        </div>
+      </a>
     </div>
   </div>
 </section>
@@ -489,14 +528,17 @@
   document.getElementById('lcSlideNext').addEventListener('click', () => lcTrackEl.scrollBy({left: lcTrackEl.clientWidth, behavior:'smooth'}));
   renderLcPost();
 
-  /* ===================== YOUTUBE VIDEO CONTENT: full-width swipe carousel ===================== */
+  /* ===================== VIDEO CONTENT: full-width swipe carousel ===================== */
   /* Add as many videos as you like — the carousel handles any number of        */
-  /* slides. Title/description are typed here, not pulled from YouTube (these  */
-  /* uploads are Unlisted, and no view count is fetched or shown, on purpose). */
+  /* slides, mixing YouTube links and your own downloaded files freely.         */
+  /* Two entry shapes:                                                          */
+  /*   YouTube:    { type:'youtube', id:'VIDEO_ID', title:'...', description:'...' } */
+  /*   Own file:   { type:'file', src:'./videos/yourfile.mp4', title:'...', description:'...' } */
   const ytVideos = [
-    { id:'GV9OEqpqWaE', title:'Sample of My Efforts', description:'A quick edit from the Mueez Anxari channel.' }
+    { type:'youtube', id:'GV9OEqpqWaE', title:'Ediii Short', description:'A quick edit from the Ediii channel.' }
     // add more here, e.g.:
-    // { id:'YOUR_VIDEO_ID', title:'Your Title', description:'A line or two about this clip.' },
+    // { type:'youtube', id:'YOUR_VIDEO_ID', title:'Your Title', description:'A line or two about this clip.' },
+    // { type:'file', src:'./videos/reel-01.mp4', title:'Downloaded Reel', description:'Originally posted on Instagram.' },
   ];
 
   function renderYtVideos(){
@@ -507,7 +549,11 @@
     ytVideos.forEach((v, i) => {
       const slide = document.createElement('div');
       slide.className = 'vid-slide';
-      slide.innerHTML = `<div class="vid-embed"><iframe src="https://www.youtube.com/embed/${v.id}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
+      if (v.type === 'file') {
+        slide.innerHTML = `<div class="vid-embed"><video src="${v.src}" controls></video></div>`;
+      } else {
+        slide.innerHTML = `<div class="vid-embed"><iframe src="https://www.youtube.com/embed/${v.id}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
+      }
       track.appendChild(slide);
       const d = document.createElement('div');
       d.className = 'dot' + (i === 0 ? ' active' : '');
